@@ -1,13 +1,112 @@
-<!DOCTYPE HTML>
-
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-    <title></title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="assets/css/main.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gifuのおすすめ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ヒーロー＆カルーセル -->
+  <section class="one">
+    <div class="carousel-container" id="carousel">
+      <!-- カルーセル画像がJavaScriptから自動挿入されます -->
+    </div>
+    
+    <!-- 背景オーバーレイ -->
+    <div class="hero-overlay"></div>
+
+    <!-- 画面固定UI: ハンバーガーボタン -->
+    <button class="menu-open-btn" id="menuOpenBtn" aria-label="Open Menu">
+      <span>MENU</span>
+      <div class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+
+    <!-- カルーセル矢印ボタン -->
+    <button class="carousel-arrow left" id="prevBtn" aria-label="Previous Slide">&lt;</button>
+    <button class="carousel-arrow right" id="nextBtn" aria-label="Next Slide">&gt;</button>
+
+    <!-- ヒーローコンテンツ -->
+    <div class="hero-content">
+      <p class="hero-subtext">自然豊かな町の</p>
+      <h1 class="hero-title">岐阜のおすすめ</h1>
+      <p class="hero-description">おすすめポイントをご紹介</p>
+      <a href="#gallery" class="hero-btn">詳しく見る</a>
+    </div>
+
+    <!-- カルーセルドットインジケーター -->
+    <div class="carousel-dots" id="dotsContainer"></div>
+  </section>
+
+  <!-- ドロワーメニュー -->
+  <div class="drawer-overlay" id="drawer">
+    <!-- 閉じる（✕）ボタン -->
+    <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">✕</button>
+
+    <!-- 7割の灰色コンテンツエリア -->
+    <div class="drawer-content">
+      <nav class="drawer-nav">
+        <div class="drawer-left">
+            <!-- サイト内移動グループ -->
+            <div class="nav-group">
+                <h3 class="nav-category-title">サイト内移動</h3>
+                <ul class="drawer-nav">
+                <li><a href="#first-view" class="scroll-link">one (TOP)</a></li>
+                <li><a href="#concept" class="scroll-link">two (CONCEPT)</a></li>
+                <li><a href="#works" class="scroll-link">three (WORKS)</a></li>
+                </ul>
+            </div>
+
+        <!-- サイト移動（別ページ遷移）グループ -->
+        <div class="nav-group">
+            <h3 class="nav-category-title">サイト移動</h3>
+            <ul class="drawer-nav">
+            <li><a href="page1.html">ページ名 1</a></li>
+            <li><a href="page2.html">ページ名 2</a></li>
+            <li><a href="page3.html">ページ名 3</a></li>
+            </ul>
+            </nav>
+    </div>
+    </div>
+
+      <div class="drawer-footer">
+        <p>1000 Ocean Drive, Bayview</p>
+        <p>+1 (555) 019-2834</p>
+      </div>
+    </div>
+
+    <!-- 3割の黒透明エリア（背景画像が透ける） -->
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  </div>
+
+  <section id="overview" class="section-concept">
+    <div class="concept-card">
+
+        <div class="concept-text-container">
+            <span class="section-tag">01 / CONCEPT</span>
+            <h2 class="concept-heading">岐阜県の概要</h2>
+            <p>岐阜県は、土地が広く自然豊かであり、歴史の産物がたくさんあります。</p>
+            <p>また、アミューズメント施設などが各地にあります。</p>
+            <p>今回は、そのほんの一部をご紹介します。</p>
+        </div>
+
+        <!-- 写真 -->
+        <div class="concept-image-container">
+            <img src="images/kari.png" alt="展望景色">
+        </div>
+
+    </div>
+  </section>
+
+  
+   
+  
+
+  <script src="script.js"></script>
 </body>
 </html>
