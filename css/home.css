@@ -1,0 +1,293 @@
+/* ヒーローセクション */
+.one {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* カルーセル */
+.carousel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+/* 画面の暗がりオーバーレイ */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+/* ハンバーガーボタン */
+.menu-open-btn {
+  position: fixed;
+  top: 32px;
+  left: 40px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 24px;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* カルーセル矢印ボタン */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-arrow.left { left: 24px; }
+.carousel-arrow.right { right: 24px; }
+
+/* ヒーローコンテンツ */
+.hero-content {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-subtext {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.hero-description {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  margin-bottom: 32px;
+  opacity: 0.8;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  transition: all 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* インジケータードット */
+.carousel-dots {
+  position: absolute;
+  bottom: 32px;
+  z-index: 20;
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #ffffff;
+  transform: scale(1.2);
+}
+/* ==========================================================================
+   SECTION 3: SELECTED WORKS (LEFT: FADED IMAGE / RIGHT: TEXT)
+   ========================================================================== */
+.section-works {
+  padding: 120px 80px;
+  background-color: #0d0d0d;
+}
+
+.works-header {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.works-title {
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  margin-top: 8px;
+  color: #ffffff;
+}
+
+.works-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* 作品カード本体（外枠枠線付き） */
+.work-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 左:画像 1 : 右:説明文 1 */
+  background: #141618;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.work-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateY(-4px);
+}
+
+/* 【重要】左側画像：右に向かって薄くなる（マスク処理） */
+.work-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background-color: #141618;
+  overflow: hidden;
+
+  /* 左から右にかけて透明度を下げるグラデーションマスク */
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+}
+
+.work-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.work-card:hover .work-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* 右側：説明文テキスト領域 */
+.work-info {
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.work-category {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: #d4af37;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.work-item-title {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.work-description {
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.work-meta {
+  display: flex;
+  gap: 24px;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: #777777;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+}
+
+/* レスポンシブ対応（スマホ表示時） */
+@media (max-width: 902px) {
+  .work-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .work-image-wrapper {
+    height: 260px;
+    /* スマホ表示時は上から下へのグラデーションに変更 */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+  }
+}

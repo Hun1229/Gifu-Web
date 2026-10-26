@@ -1,7 +1,6 @@
 const images = [
   'images/gifuCastle.jpg',
   'images/Colorful.jpg',
-//   'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80',
 ];
 
 let currentIndex = 0;
