@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gifuのおすすめ</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
   <!-- ヒーロー＆カルーセル -->
-  <section class="one">
+  <section class="one" id="one">
     <div class="carousel-container" id="carousel">
       <!-- カルーセル画像がJavaScriptから自動挿入されます -->
     </div>
@@ -44,47 +46,48 @@
   </section>
 
   <!-- ドロワーメニュー -->
-  <div class="drawer-overlay" id="drawer">
-    <!-- 閉じる（✕）ボタン -->
-    <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">✕</button>
+<div class="drawer-overlay" id="drawer">
+  <!-- 閉じる（✕）ボタン -->
+  <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">✕</button>
 
-    <!-- 7割の灰色コンテンツエリア -->
-    <div class="drawer-content">
-      <nav class="drawer-nav">
-        <div class="drawer-left">
-            <!-- サイト内移動グループ -->
-            <div class="nav-group">
-                <h3 class="nav-category-title">サイト内移動</h3>
-                <ul class="drawer-nav">
-                <li><a href="#first-view" class="scroll-link">one (TOP)</a></li>
-                <li><a href="#concept" class="scroll-link">two (CONCEPT)</a></li>
-                <li><a href="#works" class="scroll-link">three (WORKS)</a></li>
-                </ul>
-            </div>
-
-        <!-- サイト移動（別ページ遷移）グループ -->
-        <div class="nav-group">
-            <h3 class="nav-category-title">サイト移動</h3>
-            <ul class="drawer-nav">
-            <li><a href="page1.html">ページ名 1</a></li>
-            <li><a href="page2.html">ページ名 2</a></li>
-            <li><a href="page3.html">ページ名 3</a></li>
-            </ul>
-            </nav>
-    </div>
-    </div>
-
-      <div class="drawer-footer">
-        <p>1000 Ocean Drive, Bayview</p>
-        <p>+1 (555) 019-2834</p>
+  <!-- 左側：3割の灰色コンテンツエリア -->
+  <div class="drawer-left">
+    <nav class="drawer-nav">
+      <!-- サイト内移動グループ -->
+      <div class="nav-group">
+        <h3 class="nav-category-title">サイト内移動</h3>
+        <ul>
+          <li><a href="#one" class="scroll-link">TOP</a></li>
+          <li><a href="#two" class="scroll-link">CONCEPT</a></li>
+          <li><a href="#three" class="scroll-link">WORKS</a></li>
+        </ul>
       </div>
+
+      <!-- サイト移動（別ページ遷移）グループ -->
+      <div class="nav-group">
+        <h3 class="nav-category-title">サイト移動</h3>
+        <ul>
+          <li><a href="spot-a.html">ページ名 1</a></li>
+          <li><a href="spot-b.html">ページ名 2</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ドロワー下部フッター -->
+    <div class="drawer-footer">
+      <p>© 2026 Group work. All Rights Reserved.</p>
     </div>
+  </div>
+
+  <!-- 右側：7割の黒透明エリア（背景画像が透ける） -->
+  <div class="drawer-right" id="drawerBackdrop"></div>
+  </div>
 
     <!-- 3割の黒透明エリア（背景画像が透ける） -->
     <div class="drawer-backdrop" id="drawerBackdrop"></div>
-  </div>
+    </div>
 
-  <section id="overview" class="section-concept">
+  <section id="two" class="section-concept">
     <div class="concept-card">
 
         <div class="concept-text-container">
@@ -97,16 +100,63 @@
 
         <!-- 写真 -->
         <div class="concept-image-container">
-            <img src="images/kari.png" alt="展望景色">
+            <img src="images/Townscape.jpg" alt="展望景色">
         </div>
-
     </div>
   </section>
 
-  
+  <!-- SECTION 3: SELECTED WORKS -->
+  <section class="section-works" id="three">
+    <div class="works-header">
+      <span class="section-tag">02 / SELECTED WORKS</span>
+      <h2 class="works-title">ARCHITECTURAL PROJECTS</h2>
+    </div>
+
+    <div class="works-grid">
+      <!-- 作品カード 1 -->
+      <div class="work-card">
+        <!-- 左側：グラデーションフェード付き画像 -->
+        <div class="work-image-wrapper">
+          <img src="images/">
+        </div>
+        <!-- 右側：説明文 -->
+        <div class="work-info">
+          <span class="work-category">RESIDENTIAL</span>
+          <h3 class="work-item-title">The Residence Villa</h3>
+          <p class="work-description">
+            光と影が調和する、極上のプライベート邸宅。自然環境とシームレスにつながる大開口と、素材感を活かしたミニマルな空間構成が特徴です。
+          </p>
+          <div class="work-meta">
+            <span>LOCATION: TOKYO, JAPAN</span>
+            <span>YEAR: 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 作品カード 2 -->
+      <div class="work-card">
+        <!-- 左側：グラデーションフェード付き画像 -->
+        <div class="work-image-wrapper">
+          <img src="images/Colorful.jpg" alt="カラフルタウン">
+        </div>
+        <!-- 右側：説明文 -->
+        <div class="work-info">
+          <span class="work-category">COMMERCIAL</span>
+          <h3 class="work-item-title">Urban Luxury Complex</h3>
+          <p class="work-description">
+            都市の喧騒の中に洗練された静寂をもたらす商業複合施設。ガラスとコンクリートの美しさを極限まで高めた静かなシンボル建築。
+          </p>
+          <div class="work-meta">
+            <span>LOCATION: OSAKA, JAPAN</span>
+            <span>YEAR: 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
    
   
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,189 @@
+/* ==========================================================================
+   BASIC RESET & BASE STYLES
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   HAMBURGER MENU TRIGGER BUTTON
+   ========================================================================== */
+.menu-open-btn {
+  position: fixed;
+  top: 32px;
+  left: 40px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 24px;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* ==========================================================================
+   DRAWER MENU (30% Menu / 70% Opaque Overlay)
+   ========================================================================== */
+
+/* ドロワー全体コンテナ */
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: visibility 0s 0.6s, opacity 0.6s ease;
+}
+
+.drawer-overlay.open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.6s ease;
+}
+
+/* 左側：メニュー表示領域（画面の3割・灰色背景） */
+.drawer-left {
+  width: 30%;
+  height: 100%;
+  background-color: #2D3033; /* 落ち着いた灰色 */
+  padding: 120px 5% 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(-100%);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* 右側：黒透明度30%領域（画面の7割・背景透け） */
+.drawer-right {
+  width: 70%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* 透明度30%の黒 */
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  transform: translateX(-100%);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0.08s;
+}
+
+/* ドロワーが開いた際のスライドイン */
+.drawer-overlay.open .drawer-left,
+.drawer-overlay.open .drawer-right {
+  transform: translateX(0);
+}
+
+/* ✕ボタン（画面左上の元の位置に固定） */
+.menu-close-btn {
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  z-index: 1001;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-close-btn:hover {
+  transform: scale(1.1);
+}
+
+/* メニュー内のグループ・見出し */
+.nav-group {
+  margin-bottom: 32px;
+}
+
+.nav-group:last-child {
+  margin-bottom: 0;
+}
+
+/* カテゴリ見出し（「サイト内移動」「サイト移動」） */
+.nav-category-title {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  color: #d4af37; /* ゴールドアクセント */
+  font-weight: 400;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  display: inline-block;
+}
+
+/* ナビゲーションリスト＆リンク */
+.drawer-nav ul {
+  list-style: none;
+}
+
+.drawer-nav li {
+  margin-bottom: 12px;
+}
+
+.drawer-nav a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  display: inline-block;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.drawer-nav a:hover {
+  opacity: 1;
+  color: #ffffff;
+  transform: translateX(6px);
+}
+
+/* ドロワー最下部のフッター情報 */
+.drawer-footer {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   SECTIONS
+   ========================================================================== */
+.section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 40px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
