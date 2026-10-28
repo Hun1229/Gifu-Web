@@ -255,6 +255,7 @@
             padding: 20px;
             border-radius: 8px;
             background: #fff;
+            color: #000;
         }
 
         .speaker img {
@@ -273,6 +274,7 @@
             padding: 20px;
             border-radius: 8px;
             background: #fff;
+            color: #000;
         }
 
         .movie img {
@@ -395,6 +397,7 @@
             max-width: 1000px;
             margin: 30px auto;
             padding: 20px;
+            color: #000;
         }
 
         .recommend-card {
@@ -403,6 +406,7 @@
             border-top: 5px solid #2878c8;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: #000;
         }
 
         @media (max-width: 700px) {

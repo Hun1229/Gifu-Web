@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COLORFUL TOWN岐阜　紹介サイト</title>
-    <link rel="stylesheet" href="style-b.css">
+    <link rel="stylesheet" href="css/style-b.css">
+     <!-- 共通CSS -->
+  <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="" -->
 </head>
 
 <body>
 
-<!-- ===== ハンバーガーボタン ===== -->
+<!-- ===== ハンバーガーボタン =====
 <button
     id="menu-button"
     type="button"
@@ -21,13 +23,78 @@
     <span></span>
     <span></span>
     <span></span>
-</button>
+</button> -->
+
+ <!-- ヒーロー＆カルーセル -->
+  <section class="one" id="one">
+    <div class="carousel-container" id="carousel">
+      <!-- カルーセル画像がJavaScriptから自動挿入されます -->
+    </div>
+    
+    <!-- 背景オーバーレイ -->
+    <div class="hero-overlay"></div>
+
+    <!-- 画面固定UI: ハンバーガーボタン -->
+    <button class="menu-open-btn" id="menuOpenBtn" aria-label="Open Menu">
+      <span>MENU</span>
+      <div class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+   
+    <!-- カルーセルドットインジケーター -->
+    <div class="carousel-dots" id="dotsContainer"></div>
+  </section>
+
+  <!-- ドロワーメニュー -->
+<div class="drawer-overlay" id="drawer">
+  <!-- 閉じる（✕）ボタン -->
+  <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">✕</button>
+
+  <!-- 左側：3割の灰色コンテンツエリア -->
+  <div class="drawer-left">
+    <nav class="drawer-nav">
+      <!-- サイト内移動グループ -->
+      <div class="nav-group">
+        <h3 class="nav-category-title">サイト内移動</h3>
+        <ul>
+          <li><a href="#hero" class="scroll-link">TOP</a></li>
+          <li><a href="#picks" class="scroll-link">Top Picks</a></li>
+          <li><a href="#timetable" class="scroll-link">Access</a></li>
+        </ul>
+      </div>
+
+      <!-- サイト移動（別ページ遷移）グループ -->
+      <div class="nav-group">
+        <h3 class="nav-category-title">サイト移動</h3>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="spot-a.html">岐阜城１</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ドロワー下部フッター -->
+    <div class="drawer-footer">
+      <p>© 2026 Group work. All Rights Reserved.</p>
+    </div>
+  </div>
+
+  <!-- 右側：7割の黒透明エリア（背景画像が透ける） -->
+  <div class="drawer-right" id="drawerBackdrop"></div>
+  </div>
+
+    <!-- 3割の黒透明エリア（背景画像が透ける） -->
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    </div>
 
 <!-- ===== 背景オーバーレイ ===== -->
-<div id="menu-overlay"></div>
+<!-- <div id="menu-overlay"></div>
 
-<!-- ===== サイドメニュー ===== -->
-<nav id="side-menu" aria-label="メインメニュー" aria-hidden="true">
+<-- ===== サイドメニュー ===== -->
+<!-- <nav id="side-menu" aria-label="メインメニュー" aria-hidden="true">
     <h2 class="menu-title">メニュー</h2>
 
     <ul>
@@ -35,7 +102,7 @@
         <li><a href="#two">おすすめポイント</a></li>
         <li><a href="#timetable">アクセス</a></li>
     </ul>
-</nav>
+</nav> --> 
 
 <!-- ===== メイン画像 ===== -->
 <section id="hero">
@@ -63,7 +130,7 @@
 <body>
     <h1>おすすめポイント 2選</h1>
 
-    <div class="recommend-grid">
+    <div class="recommend-grid" id="picks">
         <article class="recommend-card">
             <h2>TOHOシネマズ</h2>
             <p>大迫力の映像と音響や快適な鑑賞環境</p>
@@ -81,12 +148,11 @@
     <div class="container">
 
         <article id="speaker-info" class="event-card">
-            <h3>映画館</h3>
 
             <div class="movie">
-                <img
-                    src="images/Colorful.jpg"
-                    alt="映画館">
+                <a href="https://www.colorfultown.jp/shopguide/detail/?scd=000237" target="_blank" rel="noopener noreferrer">
+                <img src="images/toho.jpg"alt="映画館">
+                </a>
 
                 <div>
                     <h4>TOHO シネマズ</h4>
@@ -123,10 +189,11 @@
 
 <!-- ===== フッター ===== -->
 <footer id="footer">
-    <p>最終更新日：10/26</p>
+    <p>最終更新日：10/28</p>
     <p>&copy; COLORFUL TOWN岐阜 紹介サイト All rights reserved.</p>
 </footer>
 
+<!-- <script src="js/script.js"></script> -->
 <script src="js/script-b.js"></script>
 
 </body>
