@@ -1,0 +1,273 @@
+/* ==========================================================================
+セクション１:
+   ========================================================================== */
+.section-1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 画面の暗がりオーバーレイ */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+/* ハンバーガーボタン */
+.menu-open-btn {
+  position: fixed;
+  top: 32px;
+  left: 40px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 24px;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-arrow.left { left: 24px; }
+.carousel-arrow.right { right: 24px; }
+
+/* ヒーローコンテンツ */
+.hero-content {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-subtext {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.hero-description {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  margin-bottom: 32px;
+  opacity: 0.8;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  transition: all 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* インジケータードット */
+.carousel-dots {
+  position: absolute;
+  bottom: 32px;
+  z-index: 20;
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #ffffff;
+  transform: scale(1.2);
+}
+/* ==========================================================================
+セクション２:
+   ========================================================================== */
+/* セクション２全体設定 */
+#two{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 60px;
+    box-sizing: border-box;
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+
+.section-2{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* 説明エリアの設定 */
+.concept-card {
+    width: 100%;
+    max-width: 700px;
+    padding: 30px 40px;
+    background-color: #f0f0f0;
+    color: #000000;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 1.8;
+    box-sizing: border-box;
+}
+
+/* 画像エリア */
+.concept-image-container {
+    width: 100%;
+    max-width: 1500px;
+    max-height: 50vh;
+    height: 0 auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px; 
+    overflow: hidden; 
+    background-color: #000000;
+}
+
+.concept-text-container img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+    display: block;
+    border-radius: 20px;
+}
+/* ==========================================================================
+セクション３:
+   ========================================================================== */
+#section3 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.section3-container {
+    width: 100%;
+    max-width: 1100px;
+    background-color: #f7f3f0;
+    border-radius: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.section3-title {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* 3つ並ぶカードのグリッド */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* 個別のサブカード */
+.sub-card {
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sub-card-img {
+    width: 100%;
+    height: 180px;
+    border-bottom: 2px solid #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.sub-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sub-card-text {
+    padding: 20px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   レスポンシブ対応（スマホ画面など）
+========================================== */
+@media (max-width: 768px) {
+    /* セクション2を縦並びに切り替え */
+    .concept-content-wrapper {
+        flex-direction: column;
+    }
+
+    /* セクション3のグリッドを縦1列に切り替え */
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

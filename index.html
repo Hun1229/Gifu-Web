@@ -1,162 +1,164 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gifuのおすすめ</title>
-  <!-- 共通CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifuのおすすめ</title>
+    <!-- 共通CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
-  <!-- ヒーロー＆カルーセル -->
-  <section class="one" id="one">
-    <div class="carousel-container" id="carousel">
-      <!-- カルーセル画像がJavaScriptから自動挿入されます -->
-    </div>
-    
-    <!-- 背景オーバーレイ -->
-    <div class="hero-overlay"></div>
-
-    <!-- 画面固定UI: ハンバーガーボタン -->
-    <button class="menu-open-btn" id="menuOpenBtn" aria-label="Open Menu">
-      <span>MENU</span>
-      <div class="hamburger-icon">
-        <span></span>
-        <span></span>
-        <span></span>
+    <!-- セクション１ -->
+    <section class="section-1" id="one">
+      <div class="carousel-container" id="carousel">
       </div>
-    </button>
+      
+      <!-- 背景オーバーレイ -->
+      <div class="hero-overlay"></div>
 
-    <!-- カルーセル矢印ボタン -->
-    <button class="carousel-arrow left" id="prevBtn" aria-label="Previous Slide">&lt;</button>
-    <button class="carousel-arrow right" id="nextBtn" aria-label="Next Slide">&gt;</button>
+      <!-- 画面固定UI: ハンバーガーボタン -->
+      <button class="menu-open-btn" id="menuOpenBtn" aria-label="Open Menu">
+        <span>MENU</span>
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
 
-    <!-- ヒーローコンテンツ -->
-    <div class="hero-content">
-      <p class="hero-subtext">自然豊かな町の</p>
-      <h1 class="hero-title">岐阜のおすすめ</h1>
-      <p class="hero-description">おすすめポイントをご紹介</p>
-      <a href="#gallery" class="hero-btn">詳しく見る</a>
-    </div>
+      <!-- カルーセル矢印ボタン -->
+      <button class="carousel-arrow left" id="prevBtn" aria-label="Previous Slide">&lt;</button>
+      <button class="carousel-arrow right" id="nextBtn" aria-label="Next Slide">&gt;</button>
 
-    <!-- カルーセルドットインジケーター -->
-    <div class="carousel-dots" id="dotsContainer"></div>
-  </section>
-
-  <!-- ドロワーメニュー -->
-<div class="drawer-overlay" id="drawer">
-  <!-- 閉じる（✕）ボタン -->
-  <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">✕</button>
-
-  <!-- 左側：3割の灰色コンテンツエリア -->
-  <div class="drawer-left">
-    <nav class="drawer-nav">
-      <!-- サイト内移動グループ -->
-      <div class="nav-group">
-        <h3 class="nav-category-title">サイト内移動</h3>
-        <ul>
-          <li><a href="#one" class="scroll-link">TOP</a></li>
-          <li><a href="#two" class="scroll-link">CONCEPT</a></li>
-          <li><a href="#three" class="scroll-link">WORKS</a></li>
-        </ul>
+      <!-- ヒーローコンテンツ -->
+      <div class="hero-content">
+        <p class="hero-subtext">自然豊かな町の</p>
+        <h1 class="hero-title">岐阜のおすすめ</h1>
+        <p class="hero-description">おすすめポイントをご紹介</p>
+        <a href="#gallery" class="hero-btn">詳しく見る</a>
       </div>
 
-      <!-- サイト移動（別ページ遷移）グループ -->
-      <div class="nav-group">
-        <h3 class="nav-category-title">サイト移動</h3>
-        <ul>
-          <li><a href="spot-a.html">ページ名 1</a></li>
-          <li><a href="spot-b.html">ページ名 2</a></li>
-        </ul>
+      <!-- カルーセルドットインジケーター -->
+      <div class="carousel-dots" id="dotsContainer"></div>
+    </section>
+
+    <!-- ドロワーメニュー -->
+    <div class="drawer-overlay" id="drawer">
+        <!-- 閉じる（✕）ボタン -->
+        <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">✕</button>
+
+        <!-- 左側：3割の灰色コンテンツエリア -->
+        <div class="drawer-left">
+            <nav class="drawer-nav">
+            <!-- サイト内移動グループ -->
+            <div class="nav-group">
+                <h3 class="nav-category-title">サイト内移動</h3>
+                <ul>
+                    <li><a href="#one" class="scroll-link">TOP</a></li>
+                    <li><a href="#two" class="scroll-link">CONCEPT</a></li>
+                    <li><a href="#three" class="scroll-link">WORKS</a></li>
+                </ul>
+            </div>
+
+        <!-- サイト移動（別ページ遷移）グループ -->
+        <div class="nav-group">
+            <h3 class="nav-category-title">サイト移動</h3>
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="spot-a.html">岐阜城 1</a></li>
+              <li><a href="spot-b.html">ページ名 2</a></li>
+            </ul>
+        </div>
+        </nav>
+
+      <!-- ドロワー下部フッター -->
+      <div class="drawer-footer">
+        <p>© 2026 Group work. All Rights Reserved.</p>
       </div>
-    </nav>
-
-    <!-- ドロワー下部フッター -->
-    <div class="drawer-footer">
-      <p>© 2026 Group work. All Rights Reserved.</p>
     </div>
-  </div>
 
-  <!-- 右側：7割の黒透明エリア（背景画像が透ける） -->
-  <div class="drawer-right" id="drawerBackdrop"></div>
-  </div>
+    <!-- 右側：7割の黒透明エリア（背景画像が透ける） -->
+    <div class="drawer-right" id="drawerBackdrop"></div>
+    </div>
 
     <!-- 3割の黒透明エリア（背景画像が透ける） -->
     <div class="drawer-backdrop" id="drawerBackdrop"></div>
     </div>
-
-  <section id="two" class="section-concept">
-    <div class="concept-card">
-
-        <div class="concept-text-container">
-            <span class="section-tag">01 / CONCEPT</span>
-            <h2 class="concept-heading">岐阜県の概要</h2>
-            <p>岐阜県は、土地が広く自然豊かであり、歴史の産物がたくさんあります。</p>
-            <p>また、アミューズメント施設などが各地にあります。</p>
-            <p>今回は、そのほんの一部をご紹介します。</p>
+  
+    <!-- セクション２ -->
+    <section id="two" class="section-2">
+        <div class="concept-card">
+            <div class="concept-text-container">
+                <span class="section-tag">CONCEPT</span>
+                <h2 class="concept-heading">岐阜県の概要</h2>
+                <p>岐阜県は、土地が広く自然豊かであり、歴史の産物がたくさんあります。</p>
+                <p>また、アミューズメント施設などが各地にあります。</p>
+                <p>今回は、そのほんの一部をご紹介します。</p>
+            </div>
         </div>
 
         <!-- 写真 -->
         <div class="concept-image-container">
             <img src="images/Townscape.jpg" alt="展望景色">
         </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECTION 3: SELECTED WORKS -->
-  <section class="section-works" id="three">
-    <div class="works-header">
-      <span class="section-tag">02 / SELECTED WORKS</span>
-      <h2 class="works-title">ARCHITECTURAL PROJECTS</h2>
-    </div>
+    <!-- SECTION 3: SELECTED WORKS -->
+    <section class="section-3" id="three">
+        
+            <span class="section-tag">02 / SELECTED WORKS</span>
+            <h2 class="works-title">ARCHITECTURAL PROJECTS</h2>
+        
 
-    <div class="works-grid">
-      <!-- 作品カード 1 -->
-      <div class="work-card">
-        <!-- 左側：グラデーションフェード付き画像 -->
-        <div class="work-image-wrapper">
-          <img src="images/">
-        </div>
-        <!-- 右側：説明文 -->
-        <div class="work-info">
-          <span class="work-category">RESIDENTIAL</span>
-          <h3 class="work-item-title">The Residence Villa</h3>
-          <p class="work-description">
-            光と影が調和する、極上のプライベート邸宅。自然環境とシームレスにつながる大開口と、素材感を活かしたミニマルな空間構成が特徴です。
-          </p>
-          <div class="work-meta">
-            <span>LOCATION: TOKYO, JAPAN</span>
-            <span>YEAR: 2026</span>
-          </div>
-        </div>
-      </div>
+        <div class="works-grid">
+        <!-- 作品カード 1 -->
+        <div class="work-card">
+            <!-- 左側：グラデーションフェード付き画像 -->
+            <div class="work-image-wrapper">
+                <a href="spot-a.html"><img src="images/gifuCastle.jpg"></a>
+            </div>
+            <!-- 右側：説明文 -->
+            <div class="work-info">
+                <span class="work-category">RESIDENTIAL</span>
+                <h3 class="work-item-title">The Residence Villa</h3>
+                <p class="work-description">
+                光と影が調和する、極上のプライベート邸宅。自然環境とシームレスにつながる大開口と、素材感を活かしたミニマルな空間構成が特徴です。
+                </p>
 
-      <!-- 作品カード 2 -->
-      <div class="work-card">
-        <!-- 左側：グラデーションフェード付き画像 -->
-        <div class="work-image-wrapper">
-          <img src="images/Colorful.jpg" alt="カラフルタウン">
+                <div class="work-meta">
+                    <span>LOCATION: TOKYO, JAPAN</span>
+                    <span>YEAR: 2026</span>
+                </div>
+            </div>
         </div>
-        <!-- 右側：説明文 -->
-        <div class="work-info">
-          <span class="work-category">COMMERCIAL</span>
-          <h3 class="work-item-title">Urban Luxury Complex</h3>
-          <p class="work-description">
-            都市の喧騒の中に洗練された静寂をもたらす商業複合施設。ガラスとコンクリートの美しさを極限まで高めた静かなシンボル建築。
-          </p>
-          <div class="work-meta">
-            <span>LOCATION: OSAKA, JAPAN</span>
-            <span>YEAR: 2025</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-   
-  
 
-  <script src="js/script.js"></script>
+        <!-- 作品カード 2 -->
+        <div class="work-card">
+            <!-- 左側：グラデーションフェード付き画像 -->
+            <div class="work-image-wrapper">
+                <a href="spot-b.html"><img src="images/Colorful.jpg" alt="カラフルタウン"></a>
+            </div>
+            <!-- 右側：説明文 -->
+            <div class="work-info">
+                <span class="work-category">COMMERCIAL</span>
+                <h3 class="work-item-title">Urban Luxury Complex</h3>
+                <p class="work-description">
+                    都市の喧騒の中に洗練された静寂をもたらす商業複合施設。ガラスとコンクリートの美しさを極限まで高めた静かなシンボル建築。
+                </p>
+                <div class="work-meta">
+                    <span>LOCATION: OSAKA, JAPAN</span>
+                    <span>YEAR: 2025</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- 共通script -->
+    <script src="js/script.js"></script>
+    <!-- Home専用 -->
+    <script src="js/script-home.js"></script>
 </body>
 </html>
