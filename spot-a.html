@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifuのおすすめ</title>
+    <!-- 共通CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-a.css">
+</head>
+<body>
+
+    <!-- セクション１ -->
+    <section class="section-1" id="one">
+        <div class="img-area">
+            <img src="images/gifuCastle.jpg">
+        </div> 
+    </section>
+      
+      <!-- 背景オーバーレイ -->
+      <div class="hero-overlay"></div>
+
+      <!-- 画面固定UI: ハンバーガーボタン -->
+        <button class="menu-open-btn" id="menuOpenBtn" aria-label="Open Menu">
+            <span>MENU</span>
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+
+    <!-- ドロワーメニュー -->
+    <div class="drawer-overlay" id="drawer">
+        <!-- 閉じる（✕）ボタン -->
+        <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">✕</button>
+
+        <!-- 左側：3割の灰色コンテンツエリア -->
+        <div class="drawer-left">
+            <nav class="drawer-nav">
+            <!-- サイト内移動グループ -->
+            <div class="nav-group">
+                <h3 class="nav-category-title">サイト内移動</h3>
+                <ul>
+                    <li><a href="#one" class="scroll-link">TOP</a></li>
+                    <li><a href="#two" class="scroll-link">CONCEPT</a></li>
+                    <li><a href="#three" class="scroll-link">WORKS</a></li>
+                </ul>
+            </div>
+
+        <!-- サイト移動（別ページ遷移）グループ -->
+        <div class="nav-group">
+            <h3 class="nav-category-title">サイト移動</h3>
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="spot-a.html">ページ名 1</a></li>
+              <li><a href="spot-b.html">ページ名 2</a></li>
+            </ul>
+        </div>
+        </nav>
+
+      <!-- ドロワー下部フッター -->
+      <div class="drawer-footer">
+        <p>© 2026 Group work. All Rights Reserved.</p>
+      </div>
+    </div>
+
+    <!-- 右側：7割の黒透明エリア（背景画像が透ける） -->
+    <div class="drawer-right" id="drawerBackdrop"></div>
+    </div>
+
+    <!-- 3割の黒透明エリア（背景画像が透ける） -->
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    </div>
+  
+    <!-- セクション２ -->
+    <section id="two" class="section-2">
+        <div class="concept-card">
+            <div class="concept-text-container">
+                <span class="section-tag">CONCEPT</span>
+                <h2 class="concept-heading">岐阜県の概要</h2>
+                <p>岐阜県は、土地が広く自然豊かであり、歴史の産物がたくさんあります。</p>
+                <p>また、アミューズメント施設などが各地にあります。</p>
+                <p>今回は、そのほんの一部をご紹介します。</p>
+            </div>
+        </div>
+
+        <!-- 写真 -->
+        <div class="concept-image-container">
+            <img src="images/Townscape.jpg" alt="展望景色">
+        </div>
+    </section>
+
+    <!-- セクション3 -->
+    <section id="section3">
+        <div class="section3-container">
+            <h2 class="section3-title">section3</h2>
+            
+            <div class="cards-grid">
+                <!-- カード1 -->
+                <div class="sub-card">
+                    <div class="sub-card-img">
+                        <img src="images/Colorful.jpg" alt="画像1">
+                    </div>
+                    <div class="sub-card-text">詳細文</div>
+                </div>
+                <!-- カード2 -->
+                <div class="sub-card">
+                    <div class="sub-card-img">
+                        <img src="images/Colorful.jpg" alt="画像2">
+                    </div>
+                    <div class="sub-card-text">詳細文</div>
+                </div>
+                <!-- カード3 -->
+                <div class="sub-card">
+                    <div class="sub-card-img">
+                        <img src="images/Colorful.jpg" alt="画像3">
+                    </div>
+                    <div class="sub-card-text">詳細文</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 共通script -->
+    <script src="js/script.js"></script>
+    <!-- spot-a専用script -->
+    <script src="js/script-a.js"></script>
+</body>
+</html>
