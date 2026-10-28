@@ -22,6 +22,22 @@
   pointer-events: none;
 }
 
+/* 見開き画像エリア */
+.img-area {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img-area img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* ハンバーガーボタン */
 .menu-open-btn {
   position: fixed;
@@ -128,24 +144,23 @@
 }
 /* ==========================================================================
 セクション２:
-   ========================================================================== */
+========================================================================== */
 /* セクション２全体設定 */
-#two{
+#two {
     width: 100%;
-    min-height: 100vh;
-    padding-top: 60px;
+    padding: 80px 20px;
     box-sizing: border-box;
     background-color: #000000;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
-    
 }
 
-.section-2{
+.section-2 {
     width: 100%;
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -153,48 +168,76 @@
     gap: 30px;
 }
 
-/* 説明エリアの設定 */
+/* 外枠カード　中の説明エリア */
 .concept-card {
     width: 100%;
-    max-width: 700px;
-    padding: 30px 40px;
-    background-color: #f0f0f0;
+    max-width: 1000px;
+    padding: 60px 50px;
+    background-color: #ffffff; 
     color: #000000;
-    border-radius: 20px;
-    text-align: center;
+    border-radius: 30px;
+    box-sizing: border-box;
+    
+    /* 左右に並べる */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+/* 左側の説明エリア */
+.concept-text-container {
+    flex: 1;
+    background-color: #f2cbaf; 
+    padding: 40px 30px;
+    border-radius: 10px;
     line-height: 1.8;
+    text-align: left;
     box-sizing: border-box;
 }
 
-/* 画像エリア */
+/* 画像コンテナ */
 .concept-image-container {
+    flex: 1;
     width: 100%;
-    max-width: 1500px;
-    max-height: 50vh;
-    height: 0 auto;
-    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
     display: flex;
     justify-content: center;
+    min-width: 0;
+    min-height: 300px;
     align-items: center;
     border-radius: 20px; 
     overflow: hidden; 
-    background-color: #000000;
+    background-color: #ffffff; /* 画像枠の背景（白） */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.concept-text-container img {
+/* 画像自体の設定 */
+.concept-image-container img {
     width: 100%;
     height: auto;
-    max-height: 50vh;
+    max-height: 400px;
     object-fit: contain;
     display: block;
-    border-radius: 20px;
+    border-radius: 15px;
+}
+
+/* スマホなど画面が狭いときは縦並びにするレスポンシブ対応 */
+@media (max-width: 768px) {
+    .concept-card {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
 }
 /* ==========================================================================
 セクション３:
    ========================================================================== */
-#section3 {
+#three {
     width: 100%;
-    min-height: 100vh;
     background-color: #000000;
     display: flex;
     justify-content: center;
@@ -215,6 +258,7 @@
     font-size: 1.2rem;
     margin-bottom: 30px;
     font-weight: bold;
+    color: #000000;
 }
 
 /* 3つ並ぶカードのグリッド */
@@ -255,6 +299,7 @@
     padding: 20px;
     text-align: center;
     font-size: 0.95rem;
+    color: #000000;
 }
 
 /* ==========================================
