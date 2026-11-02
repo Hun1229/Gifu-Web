@@ -1,9 +1,9 @@
-林
+林  
 サイト名  COLORFUL TOWN岐阜　紹介サイト
 
 カラフルタウン岐阜のおすすめポイントなどをまとめた紹介サイトです。
 
-担当内容：トップページ　１割　林
+担当内容：トップページ　１割　林  
          spot-b　林
 
 使用した技術　html,css,javascript,Github,illustrator
@@ -11,10 +11,10 @@
 参考にしたサイト：https://www.colorfultown.jp/  
 工夫した点：現地の画像を実際に撮って著作権対策をした点とgitを駆使してサイトを共有した点。
 
-嵐
+嵐  
 サイト名　岐阜のおすすめ
 
-担当内容：index.html 9割 共通css 全部  
+担当内容：index.html 9割 共通css 全部   
          spot-a　嵐
 
 使用した技術　html,css,javascript,Github,illustrator
