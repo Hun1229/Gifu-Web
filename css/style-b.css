@@ -282,7 +282,7 @@
             height: 200px;
             flex-shrink: 0;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 8px;;
         }
 
         .speaker h4 {
